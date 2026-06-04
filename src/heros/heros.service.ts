@@ -23,6 +23,6 @@ export class HerosService{
     }
 
     async findAll(){
-        return Hero.find()
+        return Hero.find().populate("avenger", "_id name description")
     }
 }
